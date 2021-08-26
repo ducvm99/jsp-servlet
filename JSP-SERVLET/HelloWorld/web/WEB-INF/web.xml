@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+<!--    Starting of Servlet-->
+    <servlet>
+        <servlet-name>Hello World</servlet-name>
+        <servlet-class>minhduc.HelloWorld</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Hello World</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+<!--    End of Servlet-->
+
+<!--    Starting of JSP-->
+    <servlet>
+        <servlet-name>Demo jsp</servlet-name>
+        <jsp-file>/process/demo.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Demo jsp</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+<!--    End of JSP-->
+</web-app>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <el-ignored>false</el-ignored>
+        </jsp-property-group>
+    </jsp-config>
+    
+    <listener>
+        <listener-class>demo.listeners.WebsiteSession</listener-class>
+    </listener>
+
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+
+    <context-param>
+        <param-name>account</param-name>
+        <param-value>minhduc</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>1234</param-value>
+    </context-param>
+    
+    <!--    Starting of Servlet-->
+    <servlet>
+        <servlet-name>Hello World</servlet-name>
+        <servlet-class>demo.servlets.HelloWorld</servlet-class>
+        <init-param>
+            <param-name>song</param-name>
+            <param-value>I am yours</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Hello World</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Authentication</servlet-name>
+        <servlet-class>demo.servlets.Authentication</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Authentication</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <!--    End of Servlet-->
+
+    <!--    Starting of JSP-->
+    <servlet>
+        <servlet-name>Demo jsp</servlet-name>
+        <jsp-file>/process/demo.jsp</jsp-file>
+        <init-param>
+            <param-name>blog</param-name>
+            <param-value>Vu Minh Duc</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Demo jsp</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <!--    End of JSP-->
+</web-app>
