@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-5.1.23-bin">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../Driver/mysql-connector-java-5.1.23-bin.jar" />
+      <root url="jar://D:/Aptech/Drivers/jstl-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../Driver/mysql-connector-java-5.1.23-bin.jar" recursive="false" />
+  </library>
+</component>
